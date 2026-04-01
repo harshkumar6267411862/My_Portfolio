@@ -1521,34 +1521,47 @@ body.end-theme .skill-card {
 
     /* Tabs Container (Hotbar) */
     .et-hero-tabs-container {
-        height: 60px;
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
         border-top: 3px solid var(--mc-ui-light);
         border-bottom: 3px solid var(--mc-ui-dark);
+        padding: 5px 0;
     }
 
     .et-hero-tab {
         font-size: 0.55rem;
-        padding: 0 5px;
+        padding: 8px 5px;
+        flex: 1 1 30%;
+        border-right: 1px solid var(--mc-ui-dark);
+        border-bottom: 1px solid var(--mc-ui-dark);
     }
 
     /* Section Boxes */
     .section-box {
         margin: 20px auto;
-        padding: 25px 15px;
-        width: 90%;
+        padding: 20px 10px;
+        width: 95%;
         border-width: 4px;
         box-sizing: border-box;
     }
 
     .section-box h1 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
 
     /* Skills */
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .skill-card {
+        padding: 15px 10px;
+    }
+    .skill-card i {
+        font-size: 30px;
+        margin-bottom: 10px;
     }
 
     /* About Section */
@@ -1606,22 +1619,28 @@ body.end-theme .skill-card {
     /* Contact Section */
     .contact-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
+    }
+
+    .contact-link {
+        padding: 10px;
+        font-size: 0.7rem;
+        gap: 10px;
     }
 
     .contact-form {
-        gap: 15px;
+        gap: 10px;
     }
 
     .contact-form input,
     .contact-form textarea,
     .contact-form button {
-        padding: 12px;
+        padding: 10px;
         font-size: 0.6rem;
     }
 
     .footer {
-        padding: 20px;
+        padding: 15px;
         font-size: 0.5rem;
     }
 }
