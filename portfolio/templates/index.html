@@ -1,360 +1,414 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-  Home | Harsh Kumar
+Home | Harsh Kumar
 {% endblock %}
 
 {% block content %}
-  <section class="et-hero-tabs">
-    <!-- Theme Toggle -->
-    <button id="theme-toggle" class="mc-btn theme-btn" title="Switch Dimension"
-      data-static="{{ url_for('static', filename='images/') }}">
-      <img id="theme-icon" src="{{ url_for('static', filename='images/villager_icon.svg') }}" alt="Villager" />
-    </button>
-    <div class="hero-clouds">
-      <div class="hero-clouds-mid"></div>
+<section class="et-hero-tabs">
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="mc-btn theme-btn" title="Switch Dimension"
+    data-static="{{ url_for('static', filename='images/') }}">
+    <img id="theme-icon" src="{{ url_for('static', filename='images/villager_icon.svg') }}" alt="Villager" />
+  </button>
+  <div class="hero-clouds">
+    <div class="hero-clouds-mid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-image flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Harsh Kumar" />
+        </div>
+        <div class="flip-card-back">
+          <img src="{{ url_for('static', filename='images/minecraft_avatar.png') }}" alt="Minecraft Avatar" />
+        </div>
+      </div>
     </div>
-    <div class="hero-content">
-      <div class="hero-image flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Harsh Kumar" />
+
+    <div class="hero-text">
+      <h1>Harsh Kumar</h1>
+      <h3>Computer Science Student passionate about AI, Full Stack Development and building real-world systems that
+        actually solve problems.</h3>
+    </div>
+  </div>
+
+  <div class="et-hero-tabs-container">
+    <a class="et-hero-tab" href="#tab-es6">Skills</a>
+    <a class="et-hero-tab" href="#tab-flexbox">About</a>
+    <a class="et-hero-tab" href="#tab-react">Projects</a>
+    <a class="et-hero-tab" href="#tab-coding">Coding Journey</a>
+    <a class="et-hero-tab" href="#tab-certificates">Certificates</a>
+    <!-- <a class="et-hero-tab" href="#tab-angular">Experience</a> -->
+    <a class="et-hero-tab" href="#tab-other">Contact Me</a>
+    <span class="et-hero-tab-slider"></span>
+  </div>
+</section>
+
+<main class="et-main">
+  <!-- SKILLS -->
+
+  <section class="et-slide skills-section" id="tab-es6">
+    <div class="section-box">
+      <div class="skills-wrapper">
+        <h1>What I Do</h1>
+
+        <p class="skills-sub">I build backend systems, data-driven dashboards, and intelligent applications using modern
+          tools.</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="devicon-python-plain colored"></i>
+            <p>Python</p>
           </div>
-          <div class="flip-card-back">
-            <img src="{{ url_for('static', filename='images/minecraft_avatar.png') }}" alt="Minecraft Avatar" />
+
+          <div class="skill-card">
+            <i class="devicon-flask-original colored"></i>
+            <p>Flask</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="devicon-cplusplus-plain colored"></i>
+            <p>C++</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="devicon-github-original colored"></i>
+            <p>GitHub</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="devicon-mysql-plain colored"></i>
+            <p>SQL</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="devicon-html5-plain colored"></i>
+            <p>HTML / CSS</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="devicon-numpy-plain colored"></i>
+            <p>NumPy</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-chart-area"></i>
+            <p>Matplotlib / Seaborn</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-file-excel"></i>
+            <p>Excel / Power BI</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fa-solid fa-brain"></i>
+            <p>Machine Learning</p>
           </div>
         </div>
       </div>
-
-      <div class="hero-text">
-        <h1>Harsh Kumar</h1>
-        <h3>Computer Science Student passionate about AI, Full Stack Development and building real-world systems that actually solve problems.</h3>
-      </div>
-    </div>
-
-    <div class="et-hero-tabs-container">
-      <a class="et-hero-tab" href="#tab-es6">Skills</a>
-      <a class="et-hero-tab" href="#tab-flexbox">About</a>
-      <a class="et-hero-tab" href="#tab-react">Projects</a>
-      <a class="et-hero-tab" href="#tab-certificates">Certificates</a>
-      <!-- <a class="et-hero-tab" href="#tab-angular">Experience</a> -->
-      <a class="et-hero-tab" href="#tab-other">Contact Me</a>
-      <span class="et-hero-tab-slider"></span>
     </div>
   </section>
 
-  <main class="et-main">
-    <!-- SKILLS -->
+  <!-- ABOUT -->
 
-    <section class="et-slide skills-section" id="tab-es6">
-      <div class="section-box">
-        <div class="skills-wrapper">
-          <h1>What I Do</h1>
+  <section class="et-slide about-section" id="tab-flexbox">
+    <div class="section-box">
+      <h1>About Me</h1>
 
-          <p class="skills-sub">I build backend systems, data-driven dashboards, and intelligent applications using modern tools.</p>
+      <div class="about-container">
+        <div class="about-text">
+          <p>I am a Computer Science student passionate about building systems that combine strong backend engineering
+            with intelligent data-driven tools.</p>
 
-          <div class="skills-grid">
-            <div class="skill-card">
-              <i class="devicon-python-plain colored"></i>
-              <p>Python</p>
-            </div>
+          <p>I enjoy working across the stack from designing databases and APIs to building interactive front-end
+            experiences.</p>
 
-            <div class="skill-card">
-              <i class="devicon-flask-original colored"></i>
-              <p>Flask</p>
-            </div>
+          <p>When I'm not coding, I focus on improving problem solving skills through DSA and experimenting with new
+            technologies.</p>
+          <div class="cv-buttons">
+            <a href="{{ url_for('static', filename='files/mycv.pdf') }}" target="_blank" class="cv-btn view-btn">View
+              CV</a>
 
-            <div class="skill-card">
-              <i class="devicon-cplusplus-plain colored"></i>
-              <p>C++</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="devicon-github-original colored"></i>
-              <p>GitHub</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="devicon-mysql-plain colored"></i>
-              <p>SQL</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="devicon-html5-plain colored"></i>
-              <p>HTML / CSS</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="devicon-numpy-plain colored"></i>
-              <p>NumPy</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="fa-solid fa-chart-area"></i>
-              <p>Matplotlib / Seaborn</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="fa-solid fa-file-excel"></i>
-              <p>Excel / Power BI</p>
-            </div>
-
-            <div class="skill-card">
-              <i class="fa-solid fa-brain"></i>
-              <p>Machine Learning</p>
-            </div>
+            <a href="{{ url_for('static', filename='files/mycv.docx') }}" download class="cv-btn download-btn">Download
+              CV</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
-
-    <section class="et-slide about-section" id="tab-flexbox">
-      <div class="section-box">
-        <h1>About Me</h1>
-
-        <div class="about-container">
-          <div class="about-text">
-            <p>I am a Computer Science student passionate about building systems that combine strong backend engineering with intelligent data-driven tools.</p>
-
-            <p>I enjoy working across the stack from designing databases and APIs to building interactive front-end experiences.</p>
-
-            <p>When I'm not coding, I focus on improving problem solving skills through DSA and experimenting with new technologies.</p>
-            <div class="cv-buttons">
-              <a href="{{ url_for('static', filename='files/mycv.pdf') }}" target="_blank" class="cv-btn view-btn">View CV</a>
-
-              <a href="{{ url_for('static', filename='files/mycv.docx') }}" download class="cv-btn download-btn">Download CV</a>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Education</h3>
+              </div>
+              <div class="card-back">
+                <ul class="edu-list">
+                  <li>
+                    <span class="edu-title">B.Tech-CSE</span>
+                    <span class="edu-inst">Lovely Professional University</span>
+                    <span class="edu-score">CGPA: 7.9</span>
+                  </li>
+                  <li>
+                    <span class="edu-title">Intermediate</span>
+                    <span class="edu-inst">Sainik School Ambikapur</span>
+                    <span class="edu-score">Score: 66%</span>
+                  </li>
+                  <li>
+                    <span class="edu-title">Matriculation</span>
+                    <span class="edu-inst">Sainik School Ambikapur</span>
+                    <span class="edu-score">Score: 89%</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="about-highlights">
-            <div class="highlight-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h3>Education</h3>
-                </div>
-                <div class="card-back">
-                  <ul class="edu-list">
-                    <li>
-                      <span class="edu-title">B.Tech-CSE</span>
-                      <span class="edu-inst">Lovely Professional University</span>
-                      <span class="edu-score">CGPA: 7.9</span>
-                    </li>
-                    <li>
-                      <span class="edu-title">Intermediate</span>
-                      <span class="edu-inst">Sainik School Ambikapur</span>
-                      <span class="edu-score">Score: 66%</span>
-                    </li>
-                    <li>
-                      <span class="edu-title">Matriculation</span>
-                      <span class="edu-inst">Sainik School Ambikapur</span>
-                      <span class="edu-score">Score: 89%</span>
-                    </li>
-                  </ul>
-                </div>
+          <div class="highlight-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Focus Areas</h3>
+              </div>
+
+              <div class="card-back">
+                <ul>
+                  <li>Backend Development</li>
+                  <li>Data Analytics and Machine Learning</li>
+                  <li>Problem Solving and Logical Thinking</li>
+                </ul>
               </div>
             </div>
+          </div>
 
-            <div class="highlight-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h3>Focus Areas</h3>
-                </div>
+          <div class="highlight-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Interests & Hobbies</h3>
+              </div>
 
-                <div class="card-back">
-                  <ul>
-                    <li>Backend Development</li>
-                    <li>Data Analytics and Machine Learning</li>
-                    <li>Problem Solving and Logical Thinking</li>
-                  </ul>
-                </div>
+              <div class="card-back">
+                <ul>
+                  <li>Reading Fiction and Non-fiction</li>
+                  <li>Playing Video Games</li>
+                  <li>Watching Anime and Web Series</li>
+                </ul>
               </div>
             </div>
+          </div>
 
-            <div class="highlight-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h3>Interests & Hobbies</h3>
-                </div>
-
-                <div class="card-back">
-                  <ul>
-                    <li>Reading Fiction and Non-fiction</li>
-                    <li>Playing Video Games</li>
-                    <li>Watching Anime and Web Series</li>
-                  </ul>
-                </div>
+          <div class="highlight-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h3>Current Goals</h3>
               </div>
-            </div>
 
-            <div class="highlight-card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <h3>Current Goals</h3>
-                </div>
-
-                <div class="card-back">
-                  <ul>
-                    <li>Solve 250+ problems on LeetCode</li>
-                    <li>Master Data Structures and Algorithms</li>
-                    <li>Build a Full-Stack Application</li>
-                    <li>Develop a Specialized Domain Project</li>
-                  </ul>
-                </div>
+              <div class="card-back">
+                <ul>
+                  <li>Solve 250+ problems on LeetCode</li>
+                  <li>Master Data Structures and Algorithms</li>
+                  <li>Build a Full-Stack Application</li>
+                  <li>Develop a Specialized Domain Project</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="et-slide projects-section" id="tab-react">
-      <div class="section-box">
-        <h1 style="color: white; text-align: center; margin-bottom: 0.6em;">Projects</h1>
+  <section class="et-slide projects-section" id="tab-react">
+    <div class="section-box">
+      <h1 style="color: white; text-align: center; margin-bottom: 0.6em;">Projects</h1>
 
-        <div class="projects-grid">
-          <!-- Filmscope -->
-          <div class="project-card" data-project="filmscope">
-            <div class="envelope">
-              <h3>Filmscope</h3>
-              <p>Excel Dashboard</p>
-            </div>
-            <span class="project-status">Completed</span>
-
-            <!-- Details – hidden until clicked -->
-            <div class="project-details" id="details-filmscope">
-              <button class="modal-close" aria-label="Close modal">×</button>
-              <h2>Filmscope – Movie Analytics Dashboard</h2>
-              <p>Filmscope is an interactive Excel dashboard built to analyze global movie trends and performance.</p>
-
-              <h4>Key Features</h4>
-              <ul>
-                <li>Dynamic filtering by genre, rating, and year</li>
-                <li>Revenue and popularity analysis</li>
-                <li>Interactive charts and pivot-based insights</li>
-                <li>Clean storytelling visualization layout</li>
-              </ul>
-
-              <h4>Tech Stack</h4>
-              <p>Excel | Pivot Tables | Power Query | Data Visualization</p>
-
-              <a href="https://github.com/harshkumar6267411862/Filmscope-interactive-excel-dashboard" target="_blank" class="project-btn">View Project</a>
-            </div>
+      <div class="projects-grid">
+        <!-- Filmscope -->
+        <div class="project-card" data-project="filmscope">
+          <div class="envelope">
+            <h3>Filmscope</h3>
+            <p>Excel Dashboard</p>
           </div>
+          <span class="project-status">Completed</span>
 
-          <!-- WeatherPulse -->
-          <div class="project-card" data-project="weatherpulse">
-            <div class="envelope">
-              <h3>WeatherPulse</h3>
-              <p>Power BI Dashboard</p>
-            </div>
-            <span class="project-status">Completed</span>
+          <!-- Details – hidden until clicked -->
+          <div class="project-details" id="details-filmscope">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2>Filmscope – Movie Analytics Dashboard</h2>
+            <p>Filmscope is an interactive Excel dashboard built to analyze global movie trends and performance.</p>
 
-            <div class="project-details" id="details-weatherpulse">
-              <button class="modal-close" aria-label="Close modal">×</button>
-              <h2>WeatherPulse – Weather Analytics Dashboard</h2>
-              <p>Interactive Power BI dashboard powered by real-time weather data using Python and OpenWeather API.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Dynamic filtering by genre, rating, and year</li>
+              <li>Revenue and popularity analysis</li>
+              <li>Interactive charts and pivot-based insights</li>
+              <li>Clean storytelling visualization layout</li>
+            </ul>
 
-              <h4>Key Features</h4>
-              <ul>
-                <li>City-based weather search</li>
-                <li>Temperature, humidity and wind analytics</li>
-                <li>Weather trend visualization</li>
-                <li>Global vs city comparisons</li>
-              </ul>
+            <h4>Tech Stack</h4>
+            <p>Excel | Pivot Tables | Power Query | Data Visualization</p>
 
-              <h4>Tech Stack</h4>
-              <p>Power BI | DAX | Python | OpenWeather API</p>
-
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiM2Y0OWE0OWEtMDdlMC00YTQ1LTg5MDUtNzU4ODNhMzk5ZjY4IiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D" target="_blank" class="project-btn">Live Dashboard</a>
-            </div>
+            <a href="https://github.com/harshkumar6267411862/Filmscope-interactive-excel-dashboard" target="_blank"
+              class="project-btn">View Project</a>
           </div>
+        </div>
 
-          <!-- RAG Model -->
-          <div class="project-card" data-project="rag">
-            <div class="envelope">
-              <h3>RAG Model</h3>
-              <p>DSA Assistant</p>
-            </div>
-            <span class="project-status">Completed</span>
-
-            <div class="project-details" id="details-rag">
-              <button class="modal-close" aria-label="Close modal">×</button>
-              <h2>RAG Model for Data Structures</h2>
-              <p>AI system that answers Data Structures and Algorithms questions using Retrieval Augmented Generation.</p>
-
-              <h4>Key Features</h4>
-              <ul>
-                <li>Semantic document retrieval</li>
-                <li>LLM-based response generation</li>
-                <li>Vector database search for algorithm explanations</li>
-              </ul>
-
-              <h4>Tech Stack</h4>
-              <p>Python | LangChain | HuggingFace | ChromaDB</p>
-
-              <a href="https://github.com/harshkumar6267411862/RAG-for-DSA" target="_blank" class="project-btn">View Project</a>
-            </div>
+        <!-- WeatherPulse -->
+        <div class="project-card" data-project="weatherpulse">
+          <div class="envelope">
+            <h3>WeatherPulse</h3>
+            <p>Power BI Dashboard</p>
           </div>
+          <span class="project-status">Completed</span>
 
-          <!-- UMS -->
-          <div class="project-card" data-project="ums">
-            <div class="envelope">
-              <h3>UMS</h3>
-              <p>University Management System</p>
-            </div>
-            <span class="project-status">Under Development</span>
+          <div class="project-details" id="details-weatherpulse">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2>WeatherPulse – Weather Analytics Dashboard</h2>
+            <p>Interactive Power BI dashboard powered by real-time weather data using Python and OpenWeather API.</p>
 
-            <div class="project-details" id="details-ums">
-              <button class="modal-close" aria-label="Close modal">×</button>
-              <h2>Learning Management System</h2>
-              <p>Backend-driven LMS platform designed for course management and student dashboards.</p>
+            <h4>Key Features</h4>
+            <ul>
+              <li>City-based weather search</li>
+              <li>Temperature, humidity and wind analytics</li>
+              <li>Weather trend visualization</li>
+              <li>Global vs city comparisons</li>
+            </ul>
 
-              <h4>Key Features</h4>
-              <ul>
-                <li>Student enrollment system</li>
-                <li>Admin academic dashboard</li>
-                <li>Secure authentication and role management</li>
-              </ul>
+            <h4>Tech Stack</h4>
+            <p>Power BI | DAX | Python | OpenWeather API</p>
 
-              <h4>Tech Stack</h4>
-              <p>Flask | SQLAlchemy | Python | MySQL</p>
-
-              <!-- No link yet – or add when ready -->
-            </div>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiM2Y0OWE0OWEtMDdlMC00YTQ1LTg5MDUtNzU4ODNhMzk5ZjY4IiwidCI6ImUxNGU3M2ViLTUyNTEtNDM4OC04ZDY3LThmOWYyZTJkNWE0NiIsImMiOjEwfQ%3D%3D"
+              target="_blank" class="project-btn">Live Dashboard</a>
           </div>
+        </div>
 
-          <!-- Whats Next -->
-          <div class="project-card" data-project="whatsnext">
-            <div class="envelope">
-              <h3>Whats Next</h3>
-              <p>Gamified Learning</p>
-            </div>
-            <span class="project-status">Under Development</span>
+        <!-- RAG Model -->
+        <div class="project-card" data-project="rag">
+          <div class="envelope">
+            <h3>RAG Model</h3>
+            <p>DSA Assistant</p>
+          </div>
+          <span class="project-status">Completed</span>
 
-            <div class="project-details" id="details-whatsnext">
-              <button class="modal-close" aria-label="Close modal">×</button>
-              <h2>Whats Next – Gamified Learning Platform</h2>
-              <p>Gamified learning platform encouraging skill development through quests and reward systems.</p>
+          <div class="project-details" id="details-rag">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2>RAG Model for Data Structures</h2>
+            <p>AI system that answers Data Structures and Algorithms questions using Retrieval Augmented Generation.</p>
 
-              <h4>Key Features</h4>
-              <ul>
-                <li>Skill progression system</li>
-                <li>Learning quests and rewards</li>
-                <li>Gamified task completion</li>
-              </ul>
+            <h4>Key Features</h4>
+            <ul>
+              <li>Semantic document retrieval</li>
+              <li>LLM-based response generation</li>
+              <li>Vector database search for algorithm explanations</li>
+            </ul>
 
-              <h4>Tech Stack</h4>
-              <p>Flask | Python | Gamification Design</p>
+            <h4>Tech Stack</h4>
+            <p>Python | LangChain | HuggingFace | ChromaDB</p>
 
-              <!-- No link yet -->
-            </div>
+            <a href="https://github.com/harshkumar6267411862/RAG-for-DSA" target="_blank" class="project-btn">View
+              Project</a>
+          </div>
+        </div>
+
+        <!-- UMS -->
+        <div class="project-card" data-project="ums">
+          <div class="envelope">
+            <h3>UMS</h3>
+            <p>University Management System</p>
+          </div>
+          <span class="project-status">Under Development</span>
+
+          <div class="project-details" id="details-ums">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2>Learning Management System</h2>
+            <p>Backend-driven LMS platform designed for course management and student dashboards.</p>
+
+            <h4>Key Features</h4>
+            <ul>
+              <li>Student enrollment system</li>
+              <li>Admin academic dashboard</li>
+              <li>Secure authentication and role management</li>
+            </ul>
+
+            <h4>Tech Stack</h4>
+            <p>Flask | SQLAlchemy | Python | MySQL</p>
+
+            <!-- No link yet – or add when ready -->
+          </div>
+        </div>
+
+        <!-- Whats Next -->
+        <div class="project-card" data-project="whatsnext">
+          <div class="envelope">
+            <h3>Whats Next</h3>
+            <p>Gamified Learning</p>
+          </div>
+          <span class="project-status">Under Development</span>
+
+          <div class="project-details" id="details-whatsnext">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <h2>Whats Next – Gamified Learning Platform</h2>
+            <p>Gamified learning platform encouraging skill development through quests and reward systems.</p>
+
+            <h4>Key Features</h4>
+            <ul>
+              <li>Skill progression system</li>
+              <li>Learning quests and rewards</li>
+              <li>Gamified task completion</li>
+            </ul>
+
+            <h4>Tech Stack</h4>
+            <p>Flask | Python | Gamification Design</p>
+
+            <!-- No link yet -->
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div id="project-overlay"></div>
+  <div id="project-overlay"></div>
+    <section class="et-slide coding-section" id="tab-coding">
+      <div class="section-box">
+        <h1>Coding Journey</h1>
+        <div class="coding-container">
+          <div class="stats-summary">
+            <div class="stat-card">
+              <span class="stat-label">Solved</span>
+              <span class="stat-value" id="lc-total">...</span>
+            </div>
+            <div class="stat-card easy">
+              <span class="stat-label">Easy</span>
+              <span class="stat-value" id="lc-easy">...</span>
+            </div>
+            <div class="stat-card medium">
+              <span class="stat-label">Medium</span>
+              <span class="stat-value" id="lc-medium">...</span>
+            </div>
+            <div class="stat-card hard">
+              <span class="stat-label">Hard</span>
+              <span class="stat-value" id="lc-hard">...</span>
+            </div>
+          </div>
+
+          <div class="contribution-wrapper">
+            <h3>Yearly Contribution</h3>
+            <div id="month-labels" class="month-labels"></div>
+            <div id="contribution-grid" class="contribution-grid"></div>
+            <div class="contribution-legend">
+              <span>Less</span>
+              <div class="legend-square" data-level="0"></div>
+              <div class="legend-square" data-level="1"></div>
+              <div class="legend-square" data-level="2"></div>
+              <div class="legend-square" data-level="3"></div>
+              <div class="legend-square" data-level="4"></div>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+        <div class="coding-footer">
+          <a href="https://leetcode.com/u/Harsh_tadokar/" target="_blank" class="mc-btn">View LeetCode Profile</a>
+        </div>
+      </div>
     </section>
 
     <!--          EXPERIENCE 
@@ -370,17 +424,18 @@
 
     <section class="et-slide certificates-section" id="tab-certificates">
       <div class="section-box">
-        <h1 style="color: white; text-align: center; margin-bottom: 0.6em;">Certificates</h1>
+        <h1>Certificates</h1>
 
         <div class="carousel-container">
           <button class="carousel-btn prev" id="cert-prev" aria-label="Previous Certificate">&lt;</button>
-          
+
           <div class="carousel-viewport">
             <div class="carousel-track" id="cert-track">
               <!-- Cipher Schools -->
               <div class="carousel-item">
                 <div class="cert-frame">
-                  <img src="{{ url_for('static', filename='images/cipherschools.png') }}" alt="Machine Learning Certificate" />
+                  <img src="{{ url_for('static', filename='images/cipherschools.png') }}"
+                    alt="Machine Learning Certificate" />
                 </div>
               </div>
 
@@ -394,7 +449,8 @@
               <!-- HelpAge India -->
               <div class="carousel-item">
                 <div class="cert-frame">
-                  <img src="{{ url_for('static', filename='images/helpage_india.jpg') }}" alt="Community Development Certificate" />
+                  <img src="{{ url_for('static', filename='images/helpage_india.jpg') }}"
+                    alt="Community Development Certificate" />
                 </div>
               </div>
             </div>
@@ -413,7 +469,8 @@
           <div class="contact-info">
             <h3>Let's Connect</h3>
 
-            <p>If you'd like to collaborate, discuss a project, or just say hello, feel free to reach out through any of the platforms below.</p>
+            <p>If you'd like to collaborate, discuss a project, or just say hello, feel free to reach out through any of
+              the platforms below.</p>
 
             <div class="contact-links">
               <a href="https://www.linkedin.com/in/harsh-kumar17" target="_blank" class="contact-link">
@@ -448,64 +505,65 @@
         </div>
       </div>
     </section>
-  </main>
+</main>
 {% endblock %}
 {% block extra_js %}
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Safety check – make sure the target element exists
-      /*const vantaContainer = document.getElementById('vanta-bg')
-    
-      if (!vantaContainer) {
-        console.warn("Vanta background container '#vanta-bg' not found in the document.")
-        return
-      }
-    
-      // Initialize VANTA.WAVES
-      try {
-        VANTA.WAVES({
-          el: vantaContainer, // better to pass the element directly
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-    
-          color: 0x0a192f, // dark modern blue
-          shininess: 60,
-          waveHeight: 18,
-          waveSpeed: 0.10,
-          zoom: 1.05,
-    
-          // Optional but recommended additions for better experience:
-          scale: 1.0, // default 1
-          scaleMobile: 1.0 // better mobile appearance
-          // You can add these if you want more control:
-          // mouseEase: 0.07,
-          // minSpeed: 0.5,
-          // maxSpeed: 1.5,
-        })
-      } catch (err) {
-        console.error('VANTA.WAVES failed to initialize:', err)
-      }*/
-    
-      document.querySelectorAll('.modal-close').forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation() // prevent bubbling if needed
-          const modal = btn.closest('.project-details')
-          if (modal) modal.classList.remove('active')
-          document.getElementById('project-overlay').classList.remove('active')
-        })
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Safety check – make sure the target element exists
+    /*const vantaContainer = document.getElementById('vanta-bg')
+  
+    if (!vantaContainer) {
+      console.warn("Vanta background container '#vanta-bg' not found in the document.")
+      return
+    }
+  
+    // Initialize VANTA.WAVES
+    try {
+      VANTA.WAVES({
+        el: vantaContainer, // better to pass the element directly
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+  
+        color: 0x0a192f, // dark modern blue
+        shininess: 60,
+        waveHeight: 18,
+        waveSpeed: 0.10,
+        zoom: 1.05,
+  
+        // Optional but recommended additions for better experience:
+        scale: 1.0, // default 1
+        scaleMobile: 1.0 // better mobile appearance
+        // You can add these if you want more control:
+        // mouseEase: 0.07,
+        // minSpeed: 0.5,
+        // maxSpeed: 1.5,
       })
-    
-      // Close when clicking overlay (background)
-      document.getElementById('project-overlay').addEventListener('click', function (e) {
-        // Only close if the click is directly on the overlay (not on modal)
-        if (e.target === this) {
-          document.querySelectorAll('.project-details.active').forEach((m) => {
-            m.classList.remove('active')
-          })
-          this.classList.remove('active')
-        }
+    } catch (err) {
+      console.error('VANTA.WAVES failed to initialize:', err)
+    }*/
+
+    document.querySelectorAll('.modal-close').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation() // prevent bubbling if needed
+        const modal = btn.closest('.project-details')
+        if (modal) modal.classList.remove('active')
+        document.getElementById('project-overlay').classList.remove('active')
       })
     })
-  </script>
+
+    // Close when clicking overlay (background)
+    document.getElementById('project-overlay').addEventListener('click', function (e) {
+      // Only close if the click is directly on the overlay (not on modal)
+      if (e.target === this) {
+        document.querySelectorAll('.project-details.active').forEach((m) => {
+          m.classList.remove('active')
+        })
+        this.classList.remove('active')
+      }
+    })
+  })
+</script>
+<script src="{{ url_for('static', filename='js/coding-stats.js') }}"></script>
 {% endblock %}

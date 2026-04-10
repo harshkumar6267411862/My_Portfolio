@@ -436,6 +436,8 @@ body.end-theme .hero-content {
 .skills-section .section-box,
 .about-section .section-box,
 .projects-section .section-box,
+.coding-section .section-box,
+.certificates-section .section-box,
 .contact-section .section-box {
     background: var(--mc-ui-bg);
     color: var(--mc-text-dark);
@@ -1642,6 +1644,203 @@ body.end-theme .skill-card {
     .footer {
         padding: 15px;
         font-size: 0.5rem;
+    }
+}
+
+/* CODING SECTION */
+.coding-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+.stats-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.stat-card {
+    background: var(--mc-dirt);
+    padding: 25px 15px;
+    text-align: center;
+    position: relative;
+    border: 4px solid #000;
+    border-top: 8px solid var(--mc-grass); /* Grass top like skill-card */
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2), 6px 6px 0 rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: url('../images/sword.png'), auto !important;
+    transition: transform 0.1s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+}
+
+.stat-card .stat-label {
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px #000;
+}
+
+.stat-card .stat-value {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px #000;
+}
+
+.stat-card.easy .stat-value { color: #55ff55; }
+.stat-card.medium .stat-value { color: #ffff55; }
+.stat-card.hard .stat-value { color: #ff5555; }
+
+.contribution-wrapper {
+    flex: 2;
+    min-width: 320px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    border: 4px solid var(--mc-ui-dark);
+    box-shadow: inset 2px 2px 0px var(--mc-ui-light), inset -2px -2px 0px var(--mc-ui-dark);
+}
+
+.contribution-wrapper h3 {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--mc-text-dark);
+}
+
+.month-labels {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 0.65rem;
+    color: var(--mc-text-dark);
+}
+
+.month-label {
+    grid-row: 1;
+}
+
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-auto-flow: column;
+    gap: 2px;
+    width: 100%;
+    aspect-ratio: 52 / 7;
+}
+
+.contrib-square {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0px; /* Square pixel look */
+}
+
+/* CONTRIBUTION LEVELS - OVERWORLD (Green) */
+.contrib-square[data-level="1"] { background-color: #9be9a8; }
+.contrib-square[data-level="2"] { background-color: #40c463; }
+.contrib-square[data-level="3"] { background-color: #30a14e; }
+.contrib-square[data-level="4"] { background-color: #216e39; }
+
+.legend-square[data-level="0"] { background-color: rgba(0, 0, 0, 0.2); }
+.legend-square[data-level="1"] { background-color: #9be9a8; }
+.legend-square[data-level="2"] { background-color: #40c463; }
+.legend-square[data-level="3"] { background-color: #30a14e; }
+.legend-square[data-level="4"] { background-color: #216e39; }
+
+/* CONTRIBUTION LEVELS - NETHER (Fire/Gold) */
+body.nether-theme .contrib-square { background-color: rgba(0, 0, 0, 0.3); }
+body.nether-theme .contrib-square[data-level="1"] { background-color: #ffe119; }
+body.nether-theme .contrib-square[data-level="2"] { background-color: #f58231; }
+body.nether-theme .contrib-square[data-level="3"] { background-color: #e6194b; }
+body.nether-theme .contrib-square[data-level="4"] { background-color: #800000; }
+
+body.nether-theme .legend-square[data-level="0"] { background-color: rgba(0, 0, 0, 0.3); }
+body.nether-theme .legend-square[data-level="1"] { background-color: #ffe119; }
+body.nether-theme .legend-square[data-level="2"] { background-color: #f58231; }
+body.nether-theme .legend-square[data-level="3"] { background-color: #e6194b; }
+body.nether-theme .legend-square[data-level="4"] { background-color: #800000; }
+
+/* CONTRIBUTION LEVELS - END (Void/Magenta) */
+body.end-theme .contrib-square { background-color: rgba(255, 255, 255, 0.1); }
+body.end-theme .contrib-square[data-level="1"] { background-color: #f032e6; }
+body.end-theme .contrib-square[data-level="2"] { background-color: #911eb4; }
+body.end-theme .contrib-square[data-level="3"] { background-color: #4b0082; }
+body.end-theme .contrib-square[data-level="4"] { background-color: #2e0041; }
+
+body.end-theme .legend-square[data-level="0"] { background-color: rgba(255, 255, 255, 0.1); }
+body.end-theme .legend-square[data-level="1"] { background-color: #f032e6; }
+body.end-theme .legend-square[data-level="2"] { background-color: #911eb4; }
+body.end-theme .legend-square[data-level="3"] { background-color: #4b0082; }
+body.end-theme .legend-square[data-level="4"] { background-color: #2e0041; }
+
+.contribution-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 15px;
+    font-size: 0.5rem;
+    color: var(--mc-text-dark);
+}
+
+.legend-square {
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.coding-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.coding-footer .mc-btn {
+    padding: 15px 25px;
+    display: inline-block;
+    background: var(--mc-btn-bg);
+    color: white;
+    font-size: 0.65rem;
+    border: 4px solid;
+    border-top-color: var(--mc-btn-light);
+    border-left-color: var(--mc-btn-light);
+    border-right-color: var(--mc-btn-dark);
+    border-bottom-color: var(--mc-btn-dark);
+    text-shadow: 2px 2px var(--mc-btn-dark);
+    transition: 0.1s;
+}
+
+.coding-footer .mc-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .coding-container {
+        flex-direction: column;
+    }
+    .stats-summary {
+        order: 2;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contribution-wrapper {
+        order: 1;
+        min-width: 100%;
+        padding: 15px;
+    }
+    .contribution-grid {
+        gap: 1px;
     }
 }
 
